@@ -1,0 +1,78 @@
+#Battle_IA_2024
+
+#Extraction des donnnes on s'interres a la table solution
+#le code suivant est executer sur linux pour extraire les donnees solutions
+
+PATHS = ['~/kalibr_workspace/db_backup_plateforme_2024-01-10_010001.sql']
+
+for file in PATHS:
+    print('process file:', file)
+    ## load and process your SQL here
+    ## an example to extract solution labels from SQL to CSV
+    os.system("awk '{gsub(/\\),\\(/,\"\n\")}1' " + file + " > line_sql")
+    os.system("egrep -n \",2,'sol',(.|..|...|....),1,\" line_sql > solution.csv")
+
+
+
+
+### Lancement de streamlit elle se fait en bash
+streamlit run app.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+#importation des donnees 
+#data
+# Utilise la variable path_data_csv
+path_data_csv = os.getenv("path_data_csv")
+df = pd.read_csv(path_data_csv)
+print(df.columns)
+
+with open(path_data_csv,newline='') as f: #Ouverture du fichier CSV
+ tableau=[]
+ lire=csv.reader(f) #chargement des lignes du fichier csv
+ print('',end='\n')
+ print('Affichage des lignes du tableau',end='\n')
+	for ligne in lire: #Pour chaque ligne...
+	print(ligne, end='\n') #...affichage de la ligne dans la console ...
+	tableau.append(ligne) #...on ajoute la ligne dans la liste ...
+ #...de liste nommée tableau
+print(tableau) # Affichage du tableau
+print(tableau[1]) # Affichage de la deuxième ligne
+print(type(tableau[1])) # Type de la variable tableau[1]
+
+#nomage des colonnes
+#colonnes 
+#Code Identification est la 4ième colonnes du fichiers solutions.csv
+#description est la 6ième colonnes du fichiers solution.csv
+
+CodeIdentification=[] # Création d’une liste vide
+n=len(tableau) # n est le nombre de ligne de tableau
+for k in range(n): # pour chaque ligne de tableau :
+CodeIdentification.append(tableau[k][3]) # on ajoute dans la liste CodeIdentification
+										# la 4ième valeur de la ligne
+print(noteHistoire) # affichage dans la console de la liste des
+ # notes CodeIdentification
+
+REFERENCE
+https://www.pedagogie.ac-nantes.fr/medias/fichier/traitementdonneestable_1686907045659-pdf
