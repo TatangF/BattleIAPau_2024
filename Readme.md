@@ -41,8 +41,8 @@ Ensuite suivez la procedure de l'architecture
 
 Les étapes de ce code sont simples et compréhensibles :
 
-1. **Étape 1 - Chargement des données :** Utilisez le module `DatabaseCleanBestParameters` pour importer les données depuis une base de données ou un entrepôt de données nommé "platform".
+1. **Étape 1 - Chargement des données :** Utilisez le module [DatabaseCleanBestParameters](https://github.com/TatangF/BattleIAPau_2024/blob/main/DatabaseCleanBestParameters.py) pour importer les données depuis une base de données ou un entrepôt de données nommé "platform".
 
-2. **Étape 2 - Entraînement du modèle :** Utilisez le module `model.py` pour entraîner les données si vous en avez plus disponibles. Enregistrez ensuite votre modèle ainsi que le vecteuriseur (TF-IDF).
+2. **Étape 2 - Entraînement du modèle :** Utilisez le module [model.py](https://github.com/TatangF/BattleIAPau_2024/blob/main/model.py) pour entraîner les données si vous en avez plus disponibles. Enregistrez ensuite votre modèle ainsi que le vecteuriseur (TF-IDF).
 
-3. **Étape 3 - Lancement de l'application :** Utilisez le module `app.py` pour lancer votre application. Vous pourriez entrer une description ou un fichier contenant des descriptions, puis l'application prédira le code identifiant et le coût énergétique associé.
+3. **Étape 3 - Lancement de l'application :** Utilisez le module [app.py](https://github.com/TatangF/BattleIAPau_2024/blob/main/App.py) pour lancer votre application. Vous pourriez entrer une description ou un fichier contenant des descriptions, puis l'application prédira le code identifiant et le coût énergétique associé.
