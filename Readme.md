@@ -5,10 +5,10 @@
 Installation
 Pour bien démarrer, créer un environment virtuelle pour installer les dépendances.
 
-python -m venv venv
+``` python -m venv venv ```
 Une fois l'environnement créé, procédez à l'installation des dépendances.
 
-python install -r requirements.txt
+``` python install -r requirements.txt ```
 
 Ensuite suivez la procedure de l'architecture 
 
