@@ -1,6 +1,6 @@
 # MyGeeks
 
-# Sujet : L’IA AU SERVICE DE LA TRANSITION ÉNERGÉTIQUE DES ENTREPRISES
+# Estimation du coût énergétique des entreprises 
 
 Ce readme explique la procédure à suivre pour prédire et calculer le coût énergétique des entreprises à partir d'une description textuelle.
 
